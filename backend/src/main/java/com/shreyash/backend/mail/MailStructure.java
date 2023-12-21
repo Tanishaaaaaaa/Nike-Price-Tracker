@@ -27,6 +27,6 @@ public class MailStructure {
     }
 
     public String getBody() {
-        return "Price Dropped for "+this.product.getName()+".\nNow only at Rs "+this.product.getPrice()+"To buy click on link - "+this.product.getURL();
+        return "Price Dropped for "+this.product.getName()+".\nNow only at Rs "+this.product.getPrice()+" To buy click on link - "+this.product.getURL();
     }
 }

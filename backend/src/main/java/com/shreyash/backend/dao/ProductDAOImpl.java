@@ -54,6 +54,13 @@ public class ProductDAOImpl implements ProductDAO{
         }
     }
 
+    @Override
+    public void updateProduct(String url, int price) {
+        String query = "UPDATE PRODUCT SET PRICE=? WHERE URL=?";
+        Object[] args = {price, url};
+        jdbcTemplate.update(query, args);
+    }
+
     public DataSource getDataSource(){
         return new DriverManagerDataSource(dotenv.get("DB_URL"), dotenv.get("DB_USER"), dotenv.get("DB_PASS"));
     }

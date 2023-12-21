@@ -8,4 +8,5 @@ public interface ProductDAO {
     Product getProduct(String URL);
     List<Product> getProducts();
     boolean removeProduct(String productURL);
+    void updateProduct(String url, int price);
 }

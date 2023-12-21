@@ -44,6 +44,7 @@ public class ProductService {
         // Send Email if price is Decreased
         if (previous.getPrice() > current.getPrice()) {
             productWebClient.sendEmailPriceDrop(current);
+            productDAO.updateProduct(current.getURL(), current.getPrice());
             return current;
         }
 
